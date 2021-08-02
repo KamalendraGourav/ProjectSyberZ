@@ -1,0 +1,1 @@
+This project is a python based voice recognition assistant. It minimises the manual efforts of the user and help in many contexts like opening youtube, search on wikipedia, browsing, cracking jokes, playing songs, and work on many custom tasks that has been assigned to it.  i
