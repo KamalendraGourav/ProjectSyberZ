@@ -1,7 +1,6 @@
 
 import subprocess
 import pyttsx3
-import random
 import operator
 import speech_recognition as sr
 import datetime
