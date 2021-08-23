@@ -1,7 +1,6 @@
 
 import subprocess
 import pyttsx3
-import tkinter
 import random
 import operator
 import speech_recognition as sr
