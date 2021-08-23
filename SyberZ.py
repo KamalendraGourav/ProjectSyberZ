@@ -1,6 +1,5 @@
 
 import subprocess
-import wolframalpha
 import pyttsx3
 import tkinter
 import random
@@ -13,14 +12,11 @@ import os
 import winshell
 import pyjokes
 import feedparser
-import smtplib
 import ctypes
 import time
 import requests
 import shutil
-from twilio.rest import Client
 from clint.textui import progress
-#from ecapture import ecapture as ec
 from bs4 import BeautifulSoup
 import win32com.client as wincl
 from urllib.request import urlopen
@@ -80,15 +76,6 @@ def takeCommand():
 speak(f"initialising System...")
 
 
-
-def sendEmail(to ,content):
-    server = smtplib.SMTP('smntp.gmail.com', 587)
-    server.eclo()
-    server.starttls()
-    server.login("loki681833@gmail.com" , 'pass.txt') # pass.txt contain password
-    server.sendmail("loki681833@gmail.com",to , content)
-    server.close()
-
 if __name__ == "__main__":
     clear = lambda : os.system('cls')
     clear()
@@ -140,17 +127,6 @@ if __name__ == "__main__":
             strTime =datetime.datetime.now().strftime("%H : %M :%S")
             speak(f"{usern} ! the time is {strTime}")
 
-        elif "send an email" in query:
-            try :
-                speak(" what should I say ?")
-                content  =takeCommand()
-                to = input()
-                sendEmail(to ,content)
-                speak(" the mail has  been sent ")
-
-            except Exception as e:
-                print (e)
-                speak("Sorrry , the mail has not been sent yet.")
 
         elif 'how are you' in query or ' how are you doing' in query or  'Are you well ' in query:
             speak (" I am fine as always, Thank you for asking")
